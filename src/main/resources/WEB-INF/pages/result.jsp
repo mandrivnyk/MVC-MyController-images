@@ -12,7 +12,8 @@
             <input type="submit" value="Upload New" onclick="window.location='/';" />
 
             <br/><br/><img src="/photo/${photo_id}" />
-            <a href="/all">View ALL</a>
+
         </div>
+        <div align="center"> <a href="/all">View ALL</a></div>
     </body>
 </html>

@@ -8,15 +8,27 @@
 </head>
 <body>
 <div align="center">
-    <h1>Your photos</h1>
-    <table border="1">
-    <c:forEach items="${photos}" var="i">
-        <tr>
-            <td><a href="/photo/${i.key}" target="_blank">${i.key}</a> </td>
-        </tr>
-    </c:forEach>
-    </table>
+    <div align="center">
+        <h1>Your photos</h1>
+        <table border="0">
+        <c:forEach items="${photos}" var="i">
+            <tr>
+                <td><a href="/photo/${i.key}" target="_blank">${i.key}</a> </td>
+            </tr>
+        </c:forEach>
+        </table>
+    </div>
+    <div align="center">
+        <form action="/view" method="POST">
+            Photo id: <input type="text" name="photo_id">
+            <input type="submit" />
+        </form>
 
+        <form action="/add_photo" enctype="multipart/form-data" method="POST">
+            Photo: <input type="file" name="photo">
+            <input type="submit" />
+        </form>
+    </div>
 </div>
 </body>
 </html>
